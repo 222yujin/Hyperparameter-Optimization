@@ -6,13 +6,13 @@ import openpyxl
 import os
 
 # 데이터 로드
-dataset_name = 'JM1'  # 데이터셋 이름 지정 (CM1, JM1, KC3 등)
+dataset_name = 'PC4'  # 데이터셋 이름 지정 CM1 JM1 KC1 KC3 MC1 MC2 MW1 PC1 PC2 PC3 PC4
 file_path = f'C:\\Users\\user\\Desktop\\work\\data\\Preprocessed\\Step2_Balanced\\{dataset_name}_Clean_Balanced.csv'
 data = pd.read_csv(file_path)
 
 # 특성과 라벨 분리
-X = data.drop('label', axis=1)
-y = data['label']
+X = data.drop('Defective', axis=1)
+y = data['Defective']
 
 # 데이터셋 분할 (train/test)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
