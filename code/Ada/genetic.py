@@ -31,40 +31,44 @@ for filename in os.listdir(folder_path):
         # 데이터셋 분할 (train/test)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # 하이퍼파라미터 경계 설정
-        varbound = np.array([[50, 300],   # n_estimators
-                             [0.01, 1.5]])  # learning_rate
+        # 아다부스트 모델 초기화
+        ab = AdaBoostClassifier(random_state=42)
 
-        # 적합도 함수 정의
+        # 유전 알고리즘을 위한 목적 함수 정의
         def fitness_function(params):
             n_estimators = int(params[0])
-            learning_rate = params[1]
+            learning_rate = float(params[1])
 
-            model = AdaBoostClassifier(n_estimators=n_estimators, learning_rate=learning_rate, random_state=42)
+            model = AdaBoostClassifier(
+                n_estimators=n_estimators,
+                learning_rate=learning_rate,
+                random_state=42
+            )
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test)
-            f1 = f1_score(y_test, y_pred, average='binary')
-            return -f1  # 적합도 함수는 최소화를 수행하므로 -f1 사용
+            return -f1_score(y_test, y_pred, average='binary')
 
         # 유전 알고리즘 설정
+        varbound = np.array([[50, 300], [0.01, 2.0]])
         algorithm_param = {'max_num_iteration': 100, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
-        model = ga(function=fitness_function, dimension=2, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
 
-        # 유전 알고리즘 실행
+        model = ga(function=fitness_function, dimension=2, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
         model.run()
 
-        # 최적의 하이퍼파라미터 출력
+        # 최적의 하이퍼파라미터 추출
         best_params = model.output_dict['variable']
         n_estimators = int(best_params[0])
-        learning_rate = best_params[1]
-        print(f"\n[{dataset_name}] 최적의 하이퍼파라미터 조합:")
-        print(f"n_estimators: {n_estimators}, learning_rate: {learning_rate}")
+        learning_rate = float(best_params[1])
 
         # 최적의 모델로 예측 수행
-        best_adaboost = AdaBoostClassifier(n_estimators=n_estimators, learning_rate=learning_rate, random_state=42)
-        best_adaboost.fit(X_train, y_train)
-        y_pred = best_adaboost.predict(X_test)
-        y_pred_proba = best_adaboost.predict_proba(X_test)[:, 1]
+        best_ab = AdaBoostClassifier(
+            n_estimators=n_estimators,
+            learning_rate=learning_rate,
+            random_state=42
+        )
+        best_ab.fit(X_train, y_train)
+        y_pred = best_ab.predict(X_test)
+        y_pred_proba = best_ab.predict_proba(X_test)[:, 1]
 
         # 성능 지표 계산
         accuracy = accuracy_score(y_test, y_pred)
@@ -85,7 +89,7 @@ for filename in os.listdir(folder_path):
 
         # 최적 하이퍼파라미터 저장
         params_df = pd.DataFrame({
-            'Dataset': [dataset_name],
+            'Dataset': [dataset_name] * 2,
             'Parameter': ['n_estimators', 'learning_rate'],
             'Best Value': [n_estimators, learning_rate]
         })
@@ -106,8 +110,15 @@ for filename in os.listdir(folder_path):
                 params_df.to_excel(writer, sheet_name=f'{dataset_name} Best Hyperparameters', index=False)
                 report_df.to_excel(writer, sheet_name=f'{dataset_name} Classification Report', index=True)
         else:
-            # 파일이 존재하면 기존 파일 불러오기 및 시트 추가
-            with pd.ExcelWriter(output_file, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
+            # 파일이 존재하면 새로운 시트로 추가 저장
+            with pd.ExcelWriter(output_file, engine='openpyxl', mode='a') as writer:
+                book = writer.book
+                if f'{dataset_name} Performance Metrics' in book.sheetnames:
+                    del book[f'{dataset_name} Performance Metrics']
+                if f'{dataset_name} Best Hyperparameters' in book.sheetnames:
+                    del book[f'{dataset_name} Best Hyperparameters']
+                if f'{dataset_name} Classification Report' in book.sheetnames:
+                    del book[f'{dataset_name} Classification Report']
                 results_df.to_excel(writer, sheet_name=f'{dataset_name} Performance Metrics', index=False)
                 params_df.to_excel(writer, sheet_name=f'{dataset_name} Best Hyperparameters', index=False)
                 report_df.to_excel(writer, sheet_name=f'{dataset_name} Classification Report', index=True)

@@ -1,10 +1,9 @@
 ﻿import os
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, roc_auc_score
-from geneticalgorithm import geneticalgorithm as ga
 from openpyxl import load_workbook
 import warnings
 
@@ -13,7 +12,7 @@ warnings.filterwarnings('ignore')
 
 # 데이터 폴더 경로 지정
 folder_path = 'C:/Users/yujin/Desktop/work/data/Preprocessed/Step2_Balanced/'
-output_file = 'C:/Users/yujin/Desktop/work/result/adaboost_genetic_algorithm_results.xlsx'
+output_file = 'C:/Users/yujin/Desktop/work/result/adaboost_grid_search_results.xlsx'
 
 # 폴더 내의 모든 CSV 파일에 대해 반복 수행
 for filename in os.listdir(folder_path):
@@ -31,50 +30,26 @@ for filename in os.listdir(folder_path):
         # 데이터셋 분할 (train/test)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # 하이퍼파라미터 경계 설정
-        varbound = np.array([[50, 300],   # n_estimators
-                             [0.01, 1.5],  # learning_rate
-                             [1, 10],     # min_samples_split
-                             [1, 10],     # min_samples_leaf
-                             [1, 10],     # max_depth
-                             [0, 1]])     # bootstrap (0 or 1)
+        # 아다부스트 모델 초기화
+        adaboost = AdaBoostClassifier(random_state=42)
 
-        # 적합도 함수 정의
-        def fitness_function(params, solution_idx):
-            n_estimators = int(params[0])
-            learning_rate = params[1]
-            min_samples_split = int(params[2])
-            min_samples_leaf = int(params[3])
-            max_depth = int(params[4]) if params[4] != 0 else None
-            bootstrap = bool(params[5])
+        # 하이퍼파라미터 그리드 설정
+        param_grid = {
+            'n_estimators': [50, 100, 200, 300],
+            'learning_rate': [0.01, 0.1, 0.5, 1.0]
+        }
 
-            model = AdaBoostClassifier(n_estimators=n_estimators, learning_rate=learning_rate, random_state=42)
-            model.fit(X_train, y_train)
-            y_pred = model.predict(X_test)
-            f1 = f1_score(y_test, y_pred, average='binary')
-            return -f1  # 적합도 함수는 최소화를 수행하므로 -f1 사용
-
-        # 유전 알고리즘 설정
-        algorithm_param = {'max_num_iteration': 100, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
-        model = ga(function=fitness_function, dimension=6, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
-
-        # 유전 알고리즘 실행
-        model.run()
+        # 그리드 서치 수행
+        grid_search = GridSearchCV(estimator=adaboost, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2, scoring='f1')
+        grid_search.fit(X_train, y_train)
 
         # 최적의 하이퍼파라미터 출력
-        best_params = model.output_dict['variable']
-        n_estimators = int(best_params[0])
-        learning_rate = best_params[1]
-        min_samples_split = int(best_params[2])
-        min_samples_leaf = int(best_params[3])
-        max_depth = int(best_params[4]) if best_params[4] != 0 else None
-        bootstrap = bool(best_params[5])
+        best_params = grid_search.best_params_
         print(f"\n[{dataset_name}] 최적의 하이퍼파라미터 조합:")
-        print(f"n_estimators: {n_estimators}, learning_rate: {learning_rate}, min_samples_split: {min_samples_split}, min_samples_leaf: {min_samples_leaf}, max_depth: {max_depth}, bootstrap: {bootstrap}")
+        print(best_params)
 
         # 최적의 모델로 예측 수행
-        best_adaboost = AdaBoostClassifier(n_estimators=n_estimators, learning_rate=learning_rate, random_state=42)
-        best_adaboost.fit(X_train, y_train)
+        best_adaboost = grid_search.best_estimator_
         y_pred = best_adaboost.predict(X_test)
         y_pred_proba = best_adaboost.predict_proba(X_test)[:, 1]
 
@@ -97,9 +72,9 @@ for filename in os.listdir(folder_path):
 
         # 최적 하이퍼파라미터 저장
         params_df = pd.DataFrame({
-            'Dataset': [dataset_name],
-            'Parameter': ['n_estimators', 'learning_rate', 'min_samples_split', 'min_samples_leaf', 'max_depth', 'bootstrap'],
-            'Best Value': [n_estimators, learning_rate, min_samples_split, min_samples_leaf, max_depth, bootstrap]
+            'Dataset': [dataset_name] * len(best_params),
+            'Parameter': list(best_params.keys()),
+            'Best Value': list(best_params.values())
         })
 
         # 엑셀 파일에 결과 저장
