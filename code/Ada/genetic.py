@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import AdaBoostClassifier
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, roc_auc_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report
 from geneticalgorithm import geneticalgorithm as ga
 from openpyxl import load_workbook
 import warnings
@@ -12,8 +12,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # 데이터 폴더 경로 지정
-folder_path = 'C:/Users/yujin/Desktop/work/data/Preprocessed/Step2_Balanced/'
-output_file = 'C:/Users/yujin/Desktop/work/result/adaboost_genetic_algorithm_results.xlsx'
+folder_path = 'C:/Users/user/Desktop/work/data/Preprocessed/Step2_Balanced/'
+output_file = 'C:/Users/user/Desktop/work/result/adaboost_genetic_algorithm_results.xlsx'
+
 
 # 폴더 내의 모든 CSV 파일에 대해 반복 수행
 for filename in os.listdir(folder_path):
@@ -31,9 +32,6 @@ for filename in os.listdir(folder_path):
         # 데이터셋 분할 (train/test)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # 아다부스트 모델 초기화
-        ab = AdaBoostClassifier(random_state=42)
-
         # 유전 알고리즘을 위한 목적 함수 정의
         def fitness_function(params):
             n_estimators = int(params[0])
@@ -49,8 +47,11 @@ for filename in os.listdir(folder_path):
             return -f1_score(y_test, y_pred, average='binary')
 
         # 유전 알고리즘 설정
-        varbound = np.array([[50, 300], [0.01, 2.0]])
-        algorithm_param = {'max_num_iteration': 100, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
+        varbound = np.array([[50, 300],  # n_estimators
+                             [0.01, 2.0]])  # learning_rate
+        algorithm_param = {'max_num_iteration': 100, 'population_size': 10, 'mutation_probability': 0.1, 
+                           'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 
+                           'crossover_type': 'uniform', 'max_iteration_without_improv': None}
 
         model = ga(function=fitness_function, dimension=2, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
         model.run()

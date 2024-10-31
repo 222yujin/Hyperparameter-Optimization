@@ -15,8 +15,8 @@ matplotlib.use('Agg')  # 이미지 백엔드 설정
 warnings.filterwarnings('ignore')
 
 # 데이터 폴더 경로 지정
-folder_path = 'C:/Users/yujin/Desktop/work/data/Preprocessed/Step2_Balanced/'
-output_file = 'C:/Users/yujin/Desktop/work/result/gradient_boosting_genetic_algorithm_results.xlsx'
+folder_path = 'C:/Users/user/Desktop/work/data/Preprocessed/Step2_Balanced/'
+output_file = 'C:/Users/user/Desktop/work/result/gradient_boosting_genetic_algorithm_results.xlsx'
 
 # 폴더 내의 모든 CSV 파일에 대해 반복 수행
 for filename in os.listdir(folder_path):

@@ -2,50 +2,18 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from geneticalgorithm import geneticalgorithm as ga
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, roc_auc_score
+from geneticalgorithm import geneticalgorithm as ga
 from openpyxl import load_workbook
 import warnings
-import matplotlib
-matplotlib.use('Agg')  # 이미지 백엔드 설정
 
 # 경고 메시지 무시 설정
 warnings.filterwarnings('ignore')
 
 # 데이터 폴더 경로 지정
-folder_path = 'C:/Users/yujin/Desktop/work/data/Preprocessed/Step2_Balanced/'
-output_file = 'C:/Users/yujin/Desktop/work/result/xgboost_genetic_algorithm_results.xlsx'
-
-# 유전 알고리즘의 파라미터 범위 설정
-def fitness_function(solution, solution_idx):
-    params = {
-        'learning_rate': solution[0],
-        'n_estimators': int(solution[1]),
-        'max_depth': int(solution[2]),
-        'min_child_weight': solution[3],
-        'subsample': solution[4],
-        'colsample_bytree': solution[5]
-    }
-    try:
-        model = XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42, **params)
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-        f1 = f1_score(y_test, y_pred, average='binary')
-        return -f1  # 유전 알고리즘은 최소화를 목표로 하므로 음수 처리
-    except Exception as e:
-        return float('inf')  # 오류가 발생한 경우, 높은 값을 반환하여 해당 솔루션이 선택되지 않도록 함
-
-varbound = np.array([
-    [0.01, 0.3],  # learning_rate
-    [50, 300],    # n_estimators
-    [3, 10],      # max_depth
-    [1, 10],      # min_child_weight
-    [0.8, 1.0],   # subsample
-    [0.8, 1.0]    # colsample_bytree
-])
-
-algorithm_param = {'max_num_iteration': 50, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
+folder_path = 'C:/Users/user/Desktop/work/data/Preprocessed/Step2_Balanced/'
+output_file = 'C:/Users/user/Desktop/work/result/xgboost_genetic_algorithm_results.xlsx'
 
 # 폴더 내의 모든 CSV 파일에 대해 반복 수행
 for filename in os.listdir(folder_path):
@@ -63,25 +31,58 @@ for filename in os.listdir(folder_path):
         # 데이터셋 분할 (train/test)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # 유전 알고리즘 초기화 및 실행
-        model = ga(function=fitness_function, dimension=6, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param, function_timeout=30)
+        # 유전 알고리즘을 위한 목적 함수 정의
+        def fitness_function(params):
+            n_estimators = int(params[0])
+            max_depth = int(params[1])
+            learning_rate = float(params[2])
+            min_child_weight = int(params[3])
+            subsample = float(params[4])
+            colsample_bytree = float(params[5])
+
+            model = XGBClassifier(
+                n_estimators=n_estimators,
+                max_depth=max_depth,
+                learning_rate=learning_rate,
+                min_child_weight=min_child_weight,
+                subsample=subsample,
+                colsample_bytree=colsample_bytree,
+                random_state=42,
+                use_label_encoder=False,
+                eval_metric='logloss'
+            )
+            model.fit(X_train, y_train)
+            y_pred = model.predict(X_test)
+            return -f1_score(y_test, y_pred, average='binary')
+
+        # 유전 알고리즘 설정
+        varbound = np.array([[50, 300], [3, 15], [0.01, 0.3], [1, 10], [0.5, 1.0], [0.5, 1.0]])
+        algorithm_param = {'max_num_iteration': 100, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
+
+        model = ga(function=fitness_function, dimension=6, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
         model.run()
 
         # 최적의 하이퍼파라미터 추출
-        best_solution = model.output_dict['variable']
-        best_params = {
-            'learning_rate': best_solution[0],
-            'n_estimators': int(best_solution[1]),
-            'max_depth': int(best_solution[2]),
-            'min_child_weight': best_solution[3],
-            'subsample': best_solution[4],
-            'colsample_bytree': best_solution[5]
-        }
-        print(f"\n[{dataset_name}] 최적의 하이퍼파라미터 조합:")
-        print(best_params)
+        best_params = model.output_dict['variable']
+        n_estimators = int(best_params[0])
+        max_depth = int(best_params[1])
+        learning_rate = float(best_params[2])
+        min_child_weight = int(best_params[3])
+        subsample = float(best_params[4])
+        colsample_bytree = float(best_params[5])
 
         # 최적의 모델로 예측 수행
-        best_xgb = XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42, **best_params)
+        best_xgb = XGBClassifier(
+            n_estimators=n_estimators,
+            max_depth=max_depth,
+            learning_rate=learning_rate,
+            min_child_weight=min_child_weight,
+            subsample=subsample,
+            colsample_bytree=colsample_bytree,
+            random_state=42,
+            use_label_encoder=False,
+            eval_metric='logloss'
+        )
         best_xgb.fit(X_train, y_train)
         y_pred = best_xgb.predict(X_test)
         y_pred_proba = best_xgb.predict_proba(X_test)[:, 1]
@@ -105,9 +106,9 @@ for filename in os.listdir(folder_path):
 
         # 최적 하이퍼파라미터 저장
         params_df = pd.DataFrame({
-            'Dataset': [dataset_name] * len(best_params),
-            'Parameter': list(best_params.keys()),
-            'Best Value': list(best_params.values())
+            'Dataset': [dataset_name] * 6,
+            'Parameter': ['n_estimators', 'max_depth', 'learning_rate', 'min_child_weight', 'subsample', 'colsample_bytree'],
+            'Best Value': [n_estimators, max_depth, learning_rate, min_child_weight, subsample, colsample_bytree]
         })
 
         # 엑셀 파일에 결과 저장
@@ -126,8 +127,15 @@ for filename in os.listdir(folder_path):
                 params_df.to_excel(writer, sheet_name=f'{dataset_name} Best Hyperparameters', index=False)
                 report_df.to_excel(writer, sheet_name=f'{dataset_name} Classification Report', index=True)
         else:
-            # 파일이 존재하면 기존 파일 불러오기 및 시트 추가
-            with pd.ExcelWriter(output_file, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
+            # 파일이 존재하면 새로운 시트로 추가 저장
+            with pd.ExcelWriter(output_file, engine='openpyxl', mode='a') as writer:
+                book = writer.book
+                if f'{dataset_name} Performance Metrics' in book.sheetnames:
+                    del book[f'{dataset_name} Performance Metrics']
+                if f'{dataset_name} Best Hyperparameters' in book.sheetnames:
+                    del book[f'{dataset_name} Best Hyperparameters']
+                if f'{dataset_name} Classification Report' in book.sheetnames:
+                    del book[f'{dataset_name} Classification Report']
                 results_df.to_excel(writer, sheet_name=f'{dataset_name} Performance Metrics', index=False)
                 params_df.to_excel(writer, sheet_name=f'{dataset_name} Best Hyperparameters', index=False)
                 report_df.to_excel(writer, sheet_name=f'{dataset_name} Classification Report', index=True)
