@@ -12,8 +12,32 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # 데이터 폴더 경로 지정
-folder_path = 'C:/Users/user/Desktop/work/data/Preprocessed/Step2_Balanced/'
-output_file = 'C:/Users/user/Desktop/work/result/catboost_genetic_algorithm_results.xlsx'
+folder_path = 'C:/Users/yujin/Desktop/work/data/Preprocessed/Step2_Balanced/'
+output_file = 'C:/Users/yujin/Desktop/work/result/catboost_genetic_algorithm_results.xlsx'
+
+# 유전 알고리즘을 위한 피트니스 함수 정의
+def fitness_function(params, solution_idx):
+    iterations = int(params[0])
+    learning_rate = params[1]
+    depth = int(params[2])
+    l2_leaf_reg = params[3]
+
+    model = CatBoostClassifier(
+        iterations=iterations,
+        learning_rate=learning_rate,
+        depth=depth,
+        l2_leaf_reg=l2_leaf_reg,
+        random_state=42,
+        verbose=0
+    )
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    f1 = f1_score(y_test, y_pred, average='binary')
+    return -f1  # 최대화를 위해 음수 반환
+
+# 유전 알고리즘 설정
+varbound = np.array([[100, 300], [0.01, 0.1], [3, 10], [1, 7]])
+algorithm_param = {'max_num_iteration': 50, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
 
 # 폴더 내의 모든 CSV 파일에 대해 반복 수행
 for filename in os.listdir(folder_path):
@@ -31,47 +55,23 @@ for filename in os.listdir(folder_path):
         # 데이터셋 분할 (train/test)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # 유전 알고리즘을 위한 목적 함수 정의
-        def fitness_function(params):
-            learning_rate = params[0]
-            depth = int(params[1])
-            iterations = int(params[2])
-
-            model = CatBoostClassifier(
-                learning_rate=learning_rate,
-                depth=depth,
-                iterations=iterations,
-                verbose=0,
-                random_state=42
-            )
-            model.fit(X_train, y_train)
-            y_pred = model.predict(X_test)
-            return -f1_score(y_test, y_pred, average='binary')
-
-        # 유전 알고리즘 설정
-        varbound = np.array([[0.01, 0.3], [3, 10], [50, 300]])
-        algorithm_param = {'max_num_iteration': 100, 'population_size': 10, 'mutation_probability': 0.1, 'elit_ratio': 0.01, 'crossover_probability': 0.5, 'parents_portion': 0.3, 'crossover_type': 'uniform', 'max_iteration_without_improv': None}
-
-        model = ga(function=fitness_function, dimension=3, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
+        # 유전 알고리즘 실행
+        model = ga(function=fitness_function, dimension=4, variable_type='real', variable_boundaries=varbound, algorithm_parameters=algorithm_param)
         model.run()
-
-        # 최적의 하이퍼파라미터 추출
         best_params = model.output_dict['variable']
-        learning_rate = best_params[0]
-        depth = int(best_params[1])
-        iterations = int(best_params[2])
 
-        # 최적의 모델로 예측 수행
-        best_cb = CatBoostClassifier(
-            learning_rate=learning_rate,
-            depth=depth,
-            iterations=iterations,
-            verbose=0,
-            random_state=42
+        # 최적의 하이퍼파라미터 적용
+        best_catboost = CatBoostClassifier(
+            iterations=int(best_params[0]),
+            learning_rate=best_params[1],
+            depth=int(best_params[2]),
+            l2_leaf_reg=best_params[3],
+            random_state=42,
+            verbose=0
         )
-        best_cb.fit(X_train, y_train)
-        y_pred = best_cb.predict(X_test)
-        y_pred_proba = best_cb.predict_proba(X_test)[:, 1]
+        best_catboost.fit(X_train, y_train)
+        y_pred = best_catboost.predict(X_test)
+        y_pred_proba = best_catboost.predict_proba(X_test)[:, 1]
 
         # 성능 지표 계산
         accuracy = accuracy_score(y_test, y_pred)
@@ -92,9 +92,9 @@ for filename in os.listdir(folder_path):
 
         # 최적 하이퍼파라미터 저장
         params_df = pd.DataFrame({
-            'Dataset': [dataset_name] * 3,
-            'Parameter': ['learning_rate', 'depth', 'iterations'],
-            'Best Value': [learning_rate, depth, iterations]
+            'Dataset': [dataset_name] * 4,
+            'Parameter': ['iterations', 'learning_rate', 'depth', 'l2_leaf_reg'],
+            'Best Value': best_params
         })
 
         # 엑셀 파일에 결과 저장
@@ -113,15 +113,8 @@ for filename in os.listdir(folder_path):
                 params_df.to_excel(writer, sheet_name=f'{dataset_name} Best Hyperparameters', index=False)
                 report_df.to_excel(writer, sheet_name=f'{dataset_name} Classification Report', index=True)
         else:
-            # 파일이 존재하면 새로운 시트로 추가 저장
-            with pd.ExcelWriter(output_file, engine='openpyxl', mode='a') as writer:
-                book = writer.book
-                if f'{dataset_name} Performance Metrics' in book.sheetnames:
-                    del book[f'{dataset_name} Performance Metrics']
-                if f'{dataset_name} Best Hyperparameters' in book.sheetnames:
-                    del book[f'{dataset_name} Best Hyperparameters']
-                if f'{dataset_name} Classification Report' in book.sheetnames:
-                    del book[f'{dataset_name} Classification Report']
+            # 파일이 존재하면 기존 파일 불러오기 및 시트 추가
+            with pd.ExcelWriter(output_file, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
                 results_df.to_excel(writer, sheet_name=f'{dataset_name} Performance Metrics', index=False)
                 params_df.to_excel(writer, sheet_name=f'{dataset_name} Best Hyperparameters', index=False)
                 report_df.to_excel(writer, sheet_name=f'{dataset_name} Classification Report', index=True)
