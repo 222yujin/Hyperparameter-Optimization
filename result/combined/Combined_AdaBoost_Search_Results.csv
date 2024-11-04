@@ -1,0 +1,529 @@
+Dataset,Metric,Value,Sheet,Parameter,Best Value,Unnamed: 0,precision,recall,f1-score,support,Search Method
+CM1,Accuracy,0.9122807017543859,CM1 Performance Metrics,,,,,,,,Grid Search
+CM1,Precision,0.8813559322033898,CM1 Performance Metrics,,,,,,,,Grid Search
+CM1,Recall,0.9454545454545454,CM1 Performance Metrics,,,,,,,,Grid Search
+CM1,F1 Score,0.9122807017543859,CM1 Performance Metrics,,,,,,,,Grid Search
+CM1,AUC,0.92326656394453,CM1 Performance Metrics,,,,,,,,Grid Search
+CM1,,,CM1 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+CM1,,,CM1 Best Hyperparameters,n_estimators,300.0,,,,,,Grid Search
+,,,CM1 Classification Report,,,0,0.9454545454545454,0.8813559322033898,0.9122807017543859,59.0,Grid Search
+,,,CM1 Classification Report,,,1,0.8813559322033898,0.9454545454545454,0.9122807017543859,55.0,Grid Search
+,,,CM1 Classification Report,,,accuracy,0.9122807017543859,0.9122807017543859,0.9122807017543859,0.9122807017543859,Grid Search
+,,,CM1 Classification Report,,,macro avg,0.9134052388289676,0.9134052388289676,0.9122807017543859,114.0,Grid Search
+,,,CM1 Classification Report,,,weighted avg,0.9145297759035492,0.9122807017543859,0.9122807017543859,114.0,Grid Search
+JM1,Accuracy,0.8134206219312602,JM1 Performance Metrics,,,,,,,,Grid Search
+JM1,Precision,0.841255605381166,JM1 Performance Metrics,,,,,,,,Grid Search
+JM1,Recall,0.770747740345111,JM1 Performance Metrics,,,,,,,,Grid Search
+JM1,F1 Score,0.8044596912521441,JM1 Performance Metrics,,,,,,,,Grid Search
+JM1,AUC,0.8938325501470274,JM1 Performance Metrics,,,,,,,,Grid Search
+JM1,,,JM1 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+JM1,,,JM1 Best Hyperparameters,n_estimators,300.0,,,,,,Grid Search
+,,,JM1 Classification Report,,,0,0.7900677200902935,0.8557457212713936,0.8215962441314554,1227.0,Grid Search
+,,,JM1 Classification Report,,,1,0.841255605381166,0.770747740345111,0.8044596912521441,1217.0,Grid Search
+,,,JM1 Classification Report,,,accuracy,0.8134206219312602,0.8134206219312602,0.8134206219312602,0.8134206219312602,Grid Search
+,,,JM1 Classification Report,,,macro avg,0.8156616627357297,0.8132467308082523,0.8130279676917997,2444.0,Grid Search
+,,,JM1 Classification Report,,,weighted avg,0.8155569412028105,0.8134206219312602,0.8130630261060372,2444.0,Grid Search
+KC1,Accuracy,0.7816091954022989,KC1 Performance Metrics,,,,,,,,Grid Search
+KC1,Precision,0.8095238095238095,KC1 Performance Metrics,,,,,,,,Grid Search
+KC1,Recall,0.7125748502994012,KC1 Performance Metrics,,,,,,,,Grid Search
+KC1,F1 Score,0.7579617834394905,KC1 Performance Metrics,,,,,,,,Grid Search
+KC1,AUC,0.8492572865319086,KC1 Performance Metrics,,,,,,,,Grid Search
+KC1,,,KC1 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+KC1,,,KC1 Best Hyperparameters,n_estimators,300.0,,,,,,Grid Search
+,,,KC1 Classification Report,,,0,0.7611940298507462,0.8453038674033149,0.8010471204188482,181.0,Grid Search
+,,,KC1 Classification Report,,,1,0.8095238095238095,0.7125748502994012,0.7579617834394905,167.0,Grid Search
+,,,KC1 Classification Report,,,accuracy,0.7816091954022989,0.7816091954022989,0.7816091954022989,0.7816091954022989,Grid Search
+,,,KC1 Classification Report,,,macro avg,0.7853589196872779,0.778939358851358,0.7795044519291694,348.0,Grid Search
+,,,KC1 Classification Report,,,weighted avg,0.7843867689467279,0.7816091954022989,0.7803711110063404,348.0,Grid Search
+KC3,Accuracy,0.84375,KC3 Performance Metrics,,,,,,,,Grid Search
+KC3,Precision,0.8235294117647058,KC3 Performance Metrics,,,,,,,,Grid Search
+KC3,Recall,0.875,KC3 Performance Metrics,,,,,,,,Grid Search
+KC3,F1 Score,0.8484848484848485,KC3 Performance Metrics,,,,,,,,Grid Search
+KC3,AUC,0.826171875,KC3 Performance Metrics,,,,,,,,Grid Search
+KC3,,,KC3 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+KC3,,,KC3 Best Hyperparameters,n_estimators,100.0,,,,,,Grid Search
+,,,KC3 Classification Report,,,0,0.8666666666666667,0.8125,0.8387096774193549,32.0,Grid Search
+,,,KC3 Classification Report,,,1,0.8235294117647058,0.875,0.8484848484848485,32.0,Grid Search
+,,,KC3 Classification Report,,,accuracy,0.84375,0.84375,0.84375,0.84375,Grid Search
+,,,KC3 Classification Report,,,macro avg,0.8450980392156863,0.84375,0.8435972629521017,64.0,Grid Search
+,,,KC3 Classification Report,,,weighted avg,0.8450980392156863,0.84375,0.8435972629521017,64.0,Grid Search
+MC1,Accuracy,0.9845559845559846,MC1 Performance Metrics,,,,,,,,Grid Search
+MC1,Precision,0.9786096256684492,MC1 Performance Metrics,,,,,,,,Grid Search
+MC1,Recall,0.9891891891891892,MC1 Performance Metrics,,,,,,,,Grid Search
+MC1,F1 Score,0.9838709677419355,MC1 Performance Metrics,,,,,,,,Grid Search
+MC1,AUC,0.9962215286539611,MC1 Performance Metrics,,,,,,,,Grid Search
+MC1,,,MC1 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+MC1,,,MC1 Best Hyperparameters,n_estimators,300.0,,,,,,Grid Search
+,,,MC1 Classification Report,,,0,0.9900744416873449,0.9803439803439803,0.9851851851851852,407.0,Grid Search
+,,,MC1 Classification Report,,,1,0.9786096256684492,0.9891891891891892,0.9838709677419355,370.0,Grid Search
+,,,MC1 Classification Report,,,accuracy,0.9845559845559846,0.9845559845559846,0.9845559845559846,0.9845559845559846,Grid Search
+,,,MC1 Classification Report,,,macro avg,0.9843420336778971,0.9847665847665847,0.9845280764635603,777.0,Grid Search
+,,,MC1 Classification Report,,,weighted avg,0.9846150054878708,0.9845559845559846,0.9845593673550662,777.0,Grid Search
+MC2,Accuracy,0.7878787878787878,MC2 Performance Metrics,,,,,,,,Grid Search
+MC2,Precision,0.8235294117647058,MC2 Performance Metrics,,,,,,,,Grid Search
+MC2,Recall,0.7777777777777778,MC2 Performance Metrics,,,,,,,,Grid Search
+MC2,F1 Score,0.8,MC2 Performance Metrics,,,,,,,,Grid Search
+MC2,AUC,0.8777777777777778,MC2 Performance Metrics,,,,,,,,Grid Search
+MC2,,,MC2 Best Hyperparameters,learning_rate,0.5,,,,,,Grid Search
+MC2,,,MC2 Best Hyperparameters,n_estimators,200.0,,,,,,Grid Search
+,,,MC2 Classification Report,,,0,0.75,0.8,0.7741935483870968,15.0,Grid Search
+,,,MC2 Classification Report,,,1,0.8235294117647058,0.7777777777777778,0.8,18.0,Grid Search
+,,,MC2 Classification Report,,,accuracy,0.7878787878787878,0.7878787878787878,0.7878787878787878,0.7878787878787878,Grid Search
+,,,MC2 Classification Report,,,macro avg,0.7867647058823529,0.788888888888889,0.7870967741935484,33.0,Grid Search
+,,,MC2 Classification Report,,,weighted avg,0.7901069518716577,0.7878787878787878,0.7882697947214077,33.0,Grid Search
+MW1,Accuracy,0.9230769230769231,MW1 Performance Metrics,,,,,,,,Grid Search
+MW1,Precision,0.92,MW1 Performance Metrics,,,,,,,,Grid Search
+MW1,Recall,0.9387755102040817,MW1 Performance Metrics,,,,,,,,Grid Search
+MW1,F1 Score,0.9292929292929293,MW1 Performance Metrics,,,,,,,,Grid Search
+MW1,AUC,0.9727891156462585,MW1 Performance Metrics,,,,,,,,Grid Search
+MW1,,,MW1 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+MW1,,,MW1 Best Hyperparameters,n_estimators,50.0,,,,,,Grid Search
+,,,MW1 Classification Report,,,0,0.926829268292683,0.9047619047619048,0.9156626506024096,42.0,Grid Search
+,,,MW1 Classification Report,,,1,0.92,0.9387755102040817,0.9292929292929293,49.0,Grid Search
+,,,MW1 Classification Report,,,accuracy,0.9230769230769231,0.9230769230769231,0.9230769230769231,0.9230769230769231,Grid Search
+,,,MW1 Classification Report,,,macro avg,0.9234146341463415,0.9217687074829932,0.9224777899476695,91.0,Grid Search
+,,,MW1 Classification Report,,,weighted avg,0.9231519699812384,0.9230769230769231,0.9230020314357663,91.0,Grid Search
+PC1,Accuracy,0.937984496124031,PC1 Performance Metrics,,,,,,,,Grid Search
+PC1,Precision,0.92,PC1 Performance Metrics,,,,,,,,Grid Search
+PC1,Recall,0.9504132231404959,PC1 Performance Metrics,,,,,,,,Grid Search
+PC1,F1 Score,0.9349593495934959,PC1 Performance Metrics,,,,,,,,Grid Search
+PC1,AUC,0.9756288833926524,PC1 Performance Metrics,,,,,,,,Grid Search
+PC1,,,PC1 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+PC1,,,PC1 Best Hyperparameters,n_estimators,300.0,,,,,,Grid Search
+,,,PC1 Classification Report,,,0,0.9548872180451128,0.927007299270073,0.9407407407407408,137.0,Grid Search
+,,,PC1 Classification Report,,,1,0.92,0.9504132231404959,0.9349593495934959,121.0,Grid Search
+,,,PC1 Classification Report,,,accuracy,0.937984496124031,0.937984496124031,0.937984496124031,0.937984496124031,Grid Search
+,,,PC1 Classification Report,,,macro avg,0.9374436090225564,0.9387102612052844,0.9378500451671183,258.0,Grid Search
+,,,PC1 Classification Report,,,weighted avg,0.9385253832255056,0.937984496124031,0.9380293131096685,258.0,Grid Search
+PC2,Accuracy,0.9794520547945206,PC2 Performance Metrics,,,,,,,,Grid Search
+PC2,Precision,0.9735099337748344,PC2 Performance Metrics,,,,,,,,Grid Search
+PC2,Recall,0.9865771812080537,PC2 Performance Metrics,,,,,,,,Grid Search
+PC2,F1 Score,0.98,PC2 Performance Metrics,,,,,,,,Grid Search
+PC2,AUC,0.9961045665743652,PC2 Performance Metrics,,,,,,,,Grid Search
+PC2,,,PC2 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+PC2,,,PC2 Best Hyperparameters,n_estimators,200.0,,,,,,Grid Search
+,,,PC2 Classification Report,,,0,0.9858156028368794,0.972027972027972,0.9788732394366197,143.0,Grid Search
+,,,PC2 Classification Report,,,1,0.9735099337748344,0.9865771812080537,0.98,149.0,Grid Search
+,,,PC2 Classification Report,,,accuracy,0.9794520547945206,0.9794520547945206,0.9794520547945206,0.9794520547945206,Grid Search
+,,,PC2 Classification Report,,,macro avg,0.979662768305857,0.9793025766180128,0.9794366197183099,292.0,Grid Search
+,,,PC2 Classification Report,,,weighted avg,0.9795363401990551,0.9794520547945206,0.979448196025468,292.0,Grid Search
+PC3,Accuracy,0.91005291005291,PC3 Performance Metrics,,,,,,,,Grid Search
+PC3,Precision,0.9067357512953368,PC3 Performance Metrics,,,,,,,,Grid Search
+PC3,Recall,0.9162303664921466,PC3 Performance Metrics,,,,,,,,Grid Search
+PC3,F1 Score,0.9114583333333334,PC3 Performance Metrics,,,,,,,,Grid Search
+PC3,AUC,0.9588431279222779,PC3 Performance Metrics,,,,,,,,Grid Search
+PC3,,,PC3 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+PC3,,,PC3 Best Hyperparameters,n_estimators,300.0,,,,,,Grid Search
+,,,PC3 Classification Report,,,0,0.9135135135135135,0.9037433155080213,0.9086021505376344,187.0,Grid Search
+,,,PC3 Classification Report,,,1,0.9067357512953368,0.9162303664921466,0.9114583333333334,191.0,Grid Search
+,,,PC3 Classification Report,,,accuracy,0.91005291005291,0.91005291005291,0.91005291005291,0.91005291005291,Grid Search
+,,,PC3 Classification Report,,,macro avg,0.9101246324044252,0.909986841000084,0.9100302419354839,378.0,Grid Search
+,,,PC3 Classification Report,,,weighted avg,0.9100887712286676,0.91005291005291,0.9100453540137681,378.0,Grid Search
+PC4,Accuracy,0.9279279279279279,PC4 Performance Metrics,,,,,,,,Grid Search
+PC4,Precision,0.8943089430894309,PC4 Performance Metrics,,,,,,,,Grid Search
+PC4,Recall,0.9734513274336283,PC4 Performance Metrics,,,,,,,,Grid Search
+PC4,F1 Score,0.9322033898305084,PC4 Performance Metrics,,,,,,,,Grid Search
+PC4,AUC,0.9859949663067306,PC4 Performance Metrics,,,,,,,,Grid Search
+PC4,,,PC4 Best Hyperparameters,learning_rate,1.0,,,,,,Grid Search
+PC4,,,PC4 Best Hyperparameters,n_estimators,200.0,,,,,,Grid Search
+,,,PC4 Classification Report,,,0,0.9696969696969697,0.8807339449541285,0.9230769230769231,218.0,Grid Search
+,,,PC4 Classification Report,,,1,0.8943089430894309,0.9734513274336283,0.9322033898305084,226.0,Grid Search
+,,,PC4 Classification Report,,,accuracy,0.9279279279279279,0.9279279279279279,0.9279279279279279,0.9279279279279279,Grid Search
+,,,PC4 Classification Report,,,macro avg,0.9320029563932003,0.9270926361938784,0.9276401564537158,444.0,Grid Search
+,,,PC4 Classification Report,,,weighted avg,0.9313237849823216,0.9279279279279279,0.9277223768749193,444.0,Grid Search
+CM1,Accuracy,0.8771929824561403,CM1 Performance Metrics,,,,,,,,Random Search
+CM1,Precision,0.8253968253968254,CM1 Performance Metrics,,,,,,,,Random Search
+CM1,Recall,0.9454545454545454,CM1 Performance Metrics,,,,,,,,Random Search
+CM1,F1 Score,0.8813559322033898,CM1 Performance Metrics,,,,,,,,Random Search
+CM1,AUC,0.9180277349768875,CM1 Performance Metrics,,,,,,,,Random Search
+CM1,,,CM1 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+CM1,,,CM1 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,CM1 Classification Report,,,0,0.9411764705882353,0.8135593220338984,0.8727272727272727,59.0,Random Search
+,,,CM1 Classification Report,,,1,0.8253968253968254,0.9454545454545454,0.8813559322033898,55.0,Random Search
+,,,CM1 Classification Report,,,accuracy,0.8771929824561403,0.8771929824561403,0.8771929824561403,0.8771929824561403,Random Search
+,,,CM1 Classification Report,,,macro avg,0.8832866479925303,0.8795069337442218,0.8770416024653312,114.0,Random Search
+,,,CM1 Classification Report,,,weighted avg,0.8853178698379937,0.8771929824561403,0.8768902224745222,114.0,Random Search
+JM1,Accuracy,0.839607201309329,JM1 Performance Metrics,,,,,,,,Random Search
+JM1,Precision,0.8815911193339501,JM1 Performance Metrics,,,,,,,,Random Search
+JM1,Recall,0.7830731306491372,JM1 Performance Metrics,,,,,,,,Random Search
+JM1,F1 Score,0.8294168842471714,JM1 Performance Metrics,,,,,,,,Random Search
+JM1,AUC,0.9038576027333505,JM1 Performance Metrics,,,,,,,,Random Search
+JM1,,,JM1 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+JM1,,,JM1 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,JM1 Classification Report,,,0,0.8063096111518708,0.895680521597392,0.8486486486486486,1227.0,Random Search
+,,,JM1 Classification Report,,,1,0.8815911193339501,0.7830731306491372,0.8294168842471714,1217.0,Random Search
+,,,JM1 Classification Report,,,accuracy,0.839607201309329,0.839607201309329,0.839607201309329,0.839607201309329,Random Search
+,,,JM1 Classification Report,,,macro avg,0.8439503652429104,0.8393768261232646,0.83903276644791,2444.0,Random Search
+,,,JM1 Classification Report,,,weighted avg,0.8437963523374643,0.839607201309329,0.8390721113014319,2444.0,Random Search
+KC1,Accuracy,0.7816091954022989,KC1 Performance Metrics,,,,,,,,Random Search
+KC1,Precision,0.8095238095238095,KC1 Performance Metrics,,,,,,,,Random Search
+KC1,Recall,0.7125748502994012,KC1 Performance Metrics,,,,,,,,Random Search
+KC1,F1 Score,0.7579617834394905,KC1 Performance Metrics,,,,,,,,Random Search
+KC1,AUC,0.8492572865319086,KC1 Performance Metrics,,,,,,,,Random Search
+KC1,,,KC1 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+KC1,,,KC1 Best Hyperparameters,learning_rate,1.0,,,,,,Random Search
+,,,KC1 Classification Report,,,0,0.7611940298507462,0.8453038674033149,0.8010471204188482,181.0,Random Search
+,,,KC1 Classification Report,,,1,0.8095238095238095,0.7125748502994012,0.7579617834394905,167.0,Random Search
+,,,KC1 Classification Report,,,accuracy,0.7816091954022989,0.7816091954022989,0.7816091954022989,0.7816091954022989,Random Search
+,,,KC1 Classification Report,,,macro avg,0.7853589196872779,0.778939358851358,0.7795044519291694,348.0,Random Search
+,,,KC1 Classification Report,,,weighted avg,0.7843867689467279,0.7816091954022989,0.7803711110063404,348.0,Random Search
+KC3,Accuracy,0.84375,KC3 Performance Metrics,,,,,,,,Random Search
+KC3,Precision,0.8235294117647058,KC3 Performance Metrics,,,,,,,,Random Search
+KC3,Recall,0.875,KC3 Performance Metrics,,,,,,,,Random Search
+KC3,F1 Score,0.8484848484848485,KC3 Performance Metrics,,,,,,,,Random Search
+KC3,AUC,0.826171875,KC3 Performance Metrics,,,,,,,,Random Search
+KC3,,,KC3 Best Hyperparameters,n_estimators,100.0,,,,,,Random Search
+KC3,,,KC3 Best Hyperparameters,learning_rate,1.0,,,,,,Random Search
+,,,KC3 Classification Report,,,0,0.8666666666666667,0.8125,0.8387096774193549,32.0,Random Search
+,,,KC3 Classification Report,,,1,0.8235294117647058,0.875,0.8484848484848485,32.0,Random Search
+,,,KC3 Classification Report,,,accuracy,0.84375,0.84375,0.84375,0.84375,Random Search
+,,,KC3 Classification Report,,,macro avg,0.8450980392156863,0.84375,0.8435972629521017,64.0,Random Search
+,,,KC3 Classification Report,,,weighted avg,0.8450980392156863,0.84375,0.8435972629521017,64.0,Random Search
+MC1,Accuracy,0.9871299871299871,MC1 Performance Metrics,,,,,,,,Random Search
+MC1,Precision,0.9864864864864865,MC1 Performance Metrics,,,,,,,,Random Search
+MC1,Recall,0.9864864864864865,MC1 Performance Metrics,,,,,,,,Random Search
+MC1,F1 Score,0.9864864864864865,MC1 Performance Metrics,,,,,,,,Random Search
+MC1,AUC,0.9979879142041305,MC1 Performance Metrics,,,,,,,,Random Search
+MC1,,,MC1 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+MC1,,,MC1 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,MC1 Classification Report,,,0,0.9877149877149877,0.9877149877149877,0.9877149877149877,407.0,Random Search
+,,,MC1 Classification Report,,,1,0.9864864864864865,0.9864864864864865,0.9864864864864865,370.0,Random Search
+,,,MC1 Classification Report,,,accuracy,0.9871299871299871,0.9871299871299871,0.9871299871299871,0.9871299871299871,Random Search
+,,,MC1 Classification Report,,,macro avg,0.9871007371007371,0.9871007371007371,0.9871007371007371,777.0,Random Search
+,,,MC1 Classification Report,,,weighted avg,0.9871299871299871,0.9871299871299871,0.9871299871299871,777.0,Random Search
+MC2,Accuracy,0.8181818181818182,MC2 Performance Metrics,,,,,,,,Random Search
+MC2,Precision,0.8333333333333334,MC2 Performance Metrics,,,,,,,,Random Search
+MC2,Recall,0.8333333333333334,MC2 Performance Metrics,,,,,,,,Random Search
+MC2,F1 Score,0.8333333333333334,MC2 Performance Metrics,,,,,,,,Random Search
+MC2,AUC,0.9148148148148149,MC2 Performance Metrics,,,,,,,,Random Search
+MC2,,,MC2 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+MC2,,,MC2 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,MC2 Classification Report,,,0,0.8,0.8,0.8,15.0,Random Search
+,,,MC2 Classification Report,,,1,0.8333333333333334,0.8333333333333334,0.8333333333333334,18.0,Random Search
+,,,MC2 Classification Report,,,accuracy,0.8181818181818182,0.8181818181818182,0.8181818181818182,0.8181818181818182,Random Search
+,,,MC2 Classification Report,,,macro avg,0.8166666666666667,0.8166666666666667,0.8166666666666667,33.0,Random Search
+,,,MC2 Classification Report,,,weighted avg,0.8181818181818182,0.8181818181818182,0.8181818181818182,33.0,Random Search
+MW1,Accuracy,0.945054945054945,MW1 Performance Metrics,,,,,,,,Random Search
+MW1,Precision,0.9583333333333334,MW1 Performance Metrics,,,,,,,,Random Search
+MW1,Recall,0.9387755102040817,MW1 Performance Metrics,,,,,,,,Random Search
+MW1,F1 Score,0.9484536082474226,MW1 Performance Metrics,,,,,,,,Random Search
+MW1,AUC,0.9873663751214771,MW1 Performance Metrics,,,,,,,,Random Search
+MW1,,,MW1 Best Hyperparameters,n_estimators,200.0,,,,,,Random Search
+MW1,,,MW1 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,MW1 Classification Report,,,0,0.9302325581395349,0.9523809523809523,0.9411764705882353,42.0,Random Search
+,,,MW1 Classification Report,,,1,0.9583333333333334,0.9387755102040817,0.9484536082474226,49.0,Random Search
+,,,MW1 Classification Report,,,accuracy,0.945054945054945,0.945054945054945,0.945054945054945,0.945054945054945,Random Search
+,,,MW1 Classification Report,,,macro avg,0.9442829457364341,0.945578231292517,0.944815039417829,91.0,Random Search
+,,,MW1 Classification Report,,,weighted avg,0.9453637447823494,0.945054945054945,0.9450949293277977,91.0,Random Search
+PC1,Accuracy,0.9341085271317829,PC1 Performance Metrics,,,,,,,,Random Search
+PC1,Precision,0.9262295081967213,PC1 Performance Metrics,,,,,,,,Random Search
+PC1,Recall,0.9338842975206612,PC1 Performance Metrics,,,,,,,,Random Search
+PC1,F1 Score,0.9300411522633745,PC1 Performance Metrics,,,,,,,,Random Search
+PC1,AUC,0.97460336610967,PC1 Performance Metrics,,,,,,,,Random Search
+PC1,,,PC1 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+PC1,,,PC1 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,PC1 Classification Report,,,0,0.9411764705882353,0.9343065693430657,0.9377289377289377,137.0,Random Search
+,,,PC1 Classification Report,,,1,0.9262295081967213,0.9338842975206612,0.9300411522633745,121.0,Random Search
+,,,PC1 Classification Report,,,accuracy,0.9341085271317829,0.9341085271317829,0.9341085271317829,0.9341085271317829,Random Search
+,,,PC1 Classification Report,,,macro avg,0.9337029893924783,0.9340954334318634,0.9338850449961561,258.0,Random Search
+,,,PC1 Classification Report,,,weighted avg,0.9341664610945408,0.9341085271317829,0.9341234259408248,258.0,Random Search
+PC2,Accuracy,0.9828767123287672,PC2 Performance Metrics,,,,,,,,Random Search
+PC2,Precision,0.98,PC2 Performance Metrics,,,,,,,,Random Search
+PC2,Recall,0.9865771812080537,PC2 Performance Metrics,,,,,,,,Random Search
+PC2,F1 Score,0.9832775919732442,PC2 Performance Metrics,,,,,,,,Random Search
+PC2,AUC,0.9992960060074153,PC2 Performance Metrics,,,,,,,,Random Search
+PC2,,,PC2 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+PC2,,,PC2 Best Hyperparameters,learning_rate,1.5,,,,,,Random Search
+,,,PC2 Classification Report,,,0,0.9859154929577465,0.9790209790209791,0.9824561403508771,143.0,Random Search
+,,,PC2 Classification Report,,,1,0.98,0.9865771812080537,0.9832775919732442,149.0,Random Search
+,,,PC2 Classification Report,,,accuracy,0.9828767123287672,0.9828767123287672,0.9828767123287672,0.9828767123287672,Random Search
+,,,PC2 Classification Report,,,macro avg,0.9829577464788732,0.9827990801145163,0.9828668661620606,292.0,Random Search
+,,,PC2 Classification Report,,,weighted avg,0.9828969708662938,0.9828767123287672,0.9828753057335232,292.0,Random Search
+PC3,Accuracy,0.91005291005291,PC3 Performance Metrics,,,,,,,,Random Search
+PC3,Precision,0.9067357512953368,PC3 Performance Metrics,,,,,,,,Random Search
+PC3,Recall,0.9162303664921466,PC3 Performance Metrics,,,,,,,,Random Search
+PC3,F1 Score,0.9114583333333334,PC3 Performance Metrics,,,,,,,,Random Search
+PC3,AUC,0.9588431279222779,PC3 Performance Metrics,,,,,,,,Random Search
+PC3,,,PC3 Best Hyperparameters,n_estimators,300.0,,,,,,Random Search
+PC3,,,PC3 Best Hyperparameters,learning_rate,1.0,,,,,,Random Search
+,,,PC3 Classification Report,,,0,0.9135135135135135,0.9037433155080213,0.9086021505376344,187.0,Random Search
+,,,PC3 Classification Report,,,1,0.9067357512953368,0.9162303664921466,0.9114583333333334,191.0,Random Search
+,,,PC3 Classification Report,,,accuracy,0.91005291005291,0.91005291005291,0.91005291005291,0.91005291005291,Random Search
+,,,PC3 Classification Report,,,macro avg,0.9101246324044252,0.909986841000084,0.9100302419354839,378.0,Random Search
+,,,PC3 Classification Report,,,weighted avg,0.9100887712286676,0.91005291005291,0.9100453540137681,378.0,Random Search
+PC4,Accuracy,0.9279279279279279,PC4 Performance Metrics,,,,,,,,Random Search
+PC4,Precision,0.8943089430894309,PC4 Performance Metrics,,,,,,,,Random Search
+PC4,Recall,0.9734513274336283,PC4 Performance Metrics,,,,,,,,Random Search
+PC4,F1 Score,0.9322033898305084,PC4 Performance Metrics,,,,,,,,Random Search
+PC4,AUC,0.9859949663067306,PC4 Performance Metrics,,,,,,,,Random Search
+PC4,,,PC4 Best Hyperparameters,n_estimators,200.0,,,,,,Random Search
+PC4,,,PC4 Best Hyperparameters,learning_rate,1.0,,,,,,Random Search
+,,,PC4 Classification Report,,,0,0.9696969696969697,0.8807339449541285,0.9230769230769231,218.0,Random Search
+,,,PC4 Classification Report,,,1,0.8943089430894309,0.9734513274336283,0.9322033898305084,226.0,Random Search
+,,,PC4 Classification Report,,,accuracy,0.9279279279279279,0.9279279279279279,0.9279279279279279,0.9279279279279279,Random Search
+,,,PC4 Classification Report,,,macro avg,0.9320029563932003,0.9270926361938784,0.9276401564537158,444.0,Random Search
+,,,PC4 Classification Report,,,weighted avg,0.9313237849823216,0.9279279279279279,0.9277223768749193,444.0,Random Search
+CM1,Accuracy,0.8859649122807017,CM1 Performance Metrics,,,,,,,,Bayesian Search
+CM1,Precision,0.8387096774193549,CM1 Performance Metrics,,,,,,,,Bayesian Search
+CM1,Recall,0.9454545454545454,CM1 Performance Metrics,,,,,,,,Bayesian Search
+CM1,F1 Score,0.8888888888888888,CM1 Performance Metrics,,,,,,,,Bayesian Search
+CM1,AUC,0.9211093990755007,CM1 Performance Metrics,,,,,,,,Bayesian Search
+CM1,,,CM1 Best Hyperparameters,learning_rate,1.496810188673366,,,,,,Bayesian Search
+CM1,,,CM1 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,CM1 Classification Report,,,0,0.9423076923076923,0.8305084745762712,0.8828828828828829,59.0,Bayesian Search
+,,,CM1 Classification Report,,,1,0.8387096774193549,0.9454545454545454,0.8888888888888888,55.0,Bayesian Search
+,,,CM1 Classification Report,,,accuracy,0.8859649122807017,0.8859649122807017,0.8859649122807017,0.8859649122807017,Bayesian Search
+,,,CM1 Classification Report,,,macro avg,0.8905086848635235,0.8879815100154083,0.8858858858858858,114.0,Bayesian Search
+,,,CM1 Classification Report,,,weighted avg,0.8923261938966524,0.8859649122807017,0.8857805173594646,114.0,Bayesian Search
+JM1,Accuracy,0.839607201309329,JM1 Performance Metrics,,,,,,,,Bayesian Search
+JM1,Precision,0.8815911193339501,JM1 Performance Metrics,,,,,,,,Bayesian Search
+JM1,Recall,0.7830731306491372,JM1 Performance Metrics,,,,,,,,Bayesian Search
+JM1,F1 Score,0.8294168842471714,JM1 Performance Metrics,,,,,,,,Bayesian Search
+JM1,AUC,0.9038576027333505,JM1 Performance Metrics,,,,,,,,Bayesian Search
+JM1,,,JM1 Best Hyperparameters,learning_rate,1.5,,,,,,Bayesian Search
+JM1,,,JM1 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,JM1 Classification Report,,,0,0.8063096111518708,0.895680521597392,0.8486486486486486,1227.0,Bayesian Search
+,,,JM1 Classification Report,,,1,0.8815911193339501,0.7830731306491372,0.8294168842471714,1217.0,Bayesian Search
+,,,JM1 Classification Report,,,accuracy,0.839607201309329,0.839607201309329,0.839607201309329,0.839607201309329,Bayesian Search
+,,,JM1 Classification Report,,,macro avg,0.8439503652429104,0.8393768261232646,0.83903276644791,2444.0,Bayesian Search
+,,,JM1 Classification Report,,,weighted avg,0.8437963523374643,0.839607201309329,0.8390721113014319,2444.0,Bayesian Search
+KC1,Accuracy,0.764367816091954,KC1 Performance Metrics,,,,,,,,Bayesian Search
+KC1,Precision,0.8057553956834532,KC1 Performance Metrics,,,,,,,,Bayesian Search
+KC1,Recall,0.6706586826347305,KC1 Performance Metrics,,,,,,,,Bayesian Search
+KC1,F1 Score,0.7320261437908496,KC1 Performance Metrics,,,,,,,,Bayesian Search
+KC1,AUC,0.8368511595593343,KC1 Performance Metrics,,,,,,,,Bayesian Search
+KC1,,,KC1 Best Hyperparameters,learning_rate,0.664100001094363,,,,,,Bayesian Search
+KC1,,,KC1 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,KC1 Classification Report,,,0,0.7368421052631579,0.850828729281768,0.7897435897435897,181.0,Bayesian Search
+,,,KC1 Classification Report,,,1,0.8057553956834532,0.6706586826347305,0.7320261437908496,167.0,Bayesian Search
+,,,KC1 Classification Report,,,accuracy,0.764367816091954,0.764367816091954,0.764367816091954,0.764367816091954,Bayesian Search
+,,,KC1 Classification Report,,,macro avg,0.7712987504733055,0.7607437059582493,0.7608848667672197,348.0,Bayesian Search
+,,,KC1 Classification Report,,,weighted avg,0.7699125635970353,0.764367816091954,0.7620458498754644,348.0,Bayesian Search
+KC3,Accuracy,0.84375,KC3 Performance Metrics,,,,,,,,Bayesian Search
+KC3,Precision,0.8235294117647058,KC3 Performance Metrics,,,,,,,,Bayesian Search
+KC3,Recall,0.875,KC3 Performance Metrics,,,,,,,,Bayesian Search
+KC3,F1 Score,0.8484848484848485,KC3 Performance Metrics,,,,,,,,Bayesian Search
+KC3,AUC,0.8701171875,KC3 Performance Metrics,,,,,,,,Bayesian Search
+KC3,,,KC3 Best Hyperparameters,learning_rate,0.6560768141937592,,,,,,Bayesian Search
+KC3,,,KC3 Best Hyperparameters,n_estimators,200.0,,,,,,Bayesian Search
+,,,KC3 Classification Report,,,0,0.8666666666666667,0.8125,0.8387096774193549,32.0,Bayesian Search
+,,,KC3 Classification Report,,,1,0.8235294117647058,0.875,0.8484848484848485,32.0,Bayesian Search
+,,,KC3 Classification Report,,,accuracy,0.84375,0.84375,0.84375,0.84375,Bayesian Search
+,,,KC3 Classification Report,,,macro avg,0.8450980392156863,0.84375,0.8435972629521017,64.0,Bayesian Search
+,,,KC3 Classification Report,,,weighted avg,0.8450980392156863,0.84375,0.8435972629521017,64.0,Bayesian Search
+MC1,Accuracy,0.9845559845559846,MC1 Performance Metrics,,,,,,,,Bayesian Search
+MC1,Precision,0.9837837837837838,MC1 Performance Metrics,,,,,,,,Bayesian Search
+MC1,Recall,0.9837837837837838,MC1 Performance Metrics,,,,,,,,Bayesian Search
+MC1,F1 Score,0.9837837837837838,MC1 Performance Metrics,,,,,,,,Bayesian Search
+MC1,AUC,0.9981207251477521,MC1 Performance Metrics,,,,,,,,Bayesian Search
+MC1,,,MC1 Best Hyperparameters,learning_rate,1.496810188673366,,,,,,Bayesian Search
+MC1,,,MC1 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,MC1 Classification Report,,,0,0.9852579852579852,0.9852579852579852,0.9852579852579852,407.0,Bayesian Search
+,,,MC1 Classification Report,,,1,0.9837837837837838,0.9837837837837838,0.9837837837837838,370.0,Bayesian Search
+,,,MC1 Classification Report,,,accuracy,0.9845559845559846,0.9845559845559846,0.9845559845559846,0.9845559845559846,Bayesian Search
+,,,MC1 Classification Report,,,macro avg,0.9845208845208846,0.9845208845208846,0.9845208845208846,777.0,Bayesian Search
+,,,MC1 Classification Report,,,weighted avg,0.9845559845559846,0.9845559845559846,0.9845559845559846,777.0,Bayesian Search
+MC2,Accuracy,0.7878787878787878,MC2 Performance Metrics,,,,,,,,Bayesian Search
+MC2,Precision,0.8235294117647058,MC2 Performance Metrics,,,,,,,,Bayesian Search
+MC2,Recall,0.7777777777777778,MC2 Performance Metrics,,,,,,,,Bayesian Search
+MC2,F1 Score,0.8,MC2 Performance Metrics,,,,,,,,Bayesian Search
+MC2,AUC,0.8851851851851852,MC2 Performance Metrics,,,,,,,,Bayesian Search
+MC2,,,MC2 Best Hyperparameters,learning_rate,0.3956507140352848,,,,,,Bayesian Search
+MC2,,,MC2 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,MC2 Classification Report,,,0,0.75,0.8,0.7741935483870968,15.0,Bayesian Search
+,,,MC2 Classification Report,,,1,0.8235294117647058,0.7777777777777778,0.8,18.0,Bayesian Search
+,,,MC2 Classification Report,,,accuracy,0.7878787878787878,0.7878787878787878,0.7878787878787878,0.7878787878787878,Bayesian Search
+,,,MC2 Classification Report,,,macro avg,0.7867647058823529,0.788888888888889,0.7870967741935484,33.0,Bayesian Search
+,,,MC2 Classification Report,,,weighted avg,0.7901069518716577,0.7878787878787878,0.7882697947214077,33.0,Bayesian Search
+MW1,Accuracy,0.9120879120879121,MW1 Performance Metrics,,,,,,,,Bayesian Search
+MW1,Precision,0.9183673469387755,MW1 Performance Metrics,,,,,,,,Bayesian Search
+MW1,Recall,0.9183673469387755,MW1 Performance Metrics,,,,,,,,Bayesian Search
+MW1,F1 Score,0.9183673469387755,MW1 Performance Metrics,,,,,,,,Bayesian Search
+MW1,AUC,0.9747327502429544,MW1 Performance Metrics,,,,,,,,Bayesian Search
+MW1,,,MW1 Best Hyperparameters,learning_rate,1.499133759093606,,,,,,Bayesian Search
+MW1,,,MW1 Best Hyperparameters,n_estimators,100.0,,,,,,Bayesian Search
+,,,MW1 Classification Report,,,0,0.9047619047619048,0.9047619047619048,0.9047619047619048,42.0,Bayesian Search
+,,,MW1 Classification Report,,,1,0.9183673469387755,0.9183673469387755,0.9183673469387755,49.0,Bayesian Search
+,,,MW1 Classification Report,,,accuracy,0.9120879120879121,0.9120879120879121,0.9120879120879121,0.9120879120879121,Bayesian Search
+,,,MW1 Classification Report,,,macro avg,0.9115646258503401,0.9115646258503401,0.9115646258503401,91.0,Bayesian Search
+,,,MW1 Classification Report,,,weighted avg,0.9120879120879121,0.9120879120879121,0.9120879120879121,91.0,Bayesian Search
+PC1,Accuracy,0.9496124031007752,PC1 Performance Metrics,,,,,,,,Bayesian Search
+PC1,Precision,0.9426229508196722,PC1 Performance Metrics,,,,,,,,Bayesian Search
+PC1,Recall,0.9504132231404959,PC1 Performance Metrics,,,,,,,,Bayesian Search
+PC1,F1 Score,0.9465020576131687,PC1 Performance Metrics,,,,,,,,Bayesian Search
+PC1,AUC,0.9764131024914038,PC1 Performance Metrics,,,,,,,,Bayesian Search
+PC1,,,PC1 Best Hyperparameters,learning_rate,1.499851956292076,,,,,,Bayesian Search
+PC1,,,PC1 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,PC1 Classification Report,,,0,0.9558823529411765,0.948905109489051,0.9523809523809523,137.0,Bayesian Search
+,,,PC1 Classification Report,,,1,0.9426229508196722,0.9504132231404959,0.9465020576131687,121.0,Bayesian Search
+,,,PC1 Classification Report,,,accuracy,0.9496124031007752,0.9496124031007752,0.9496124031007752,0.9496124031007752,Bayesian Search
+,,,PC1 Classification Report,,,macro avg,0.9492526518804243,0.9496591663147735,0.9494415049970606,258.0,Bayesian Search
+,,,PC1 Classification Report,,,weighted avg,0.9496637961322539,0.9496124031007752,0.9496237963076894,258.0,Bayesian Search
+PC2,Accuracy,0.976027397260274,PC2 Performance Metrics,,,,,,,,Bayesian Search
+PC2,Precision,0.9671052631578947,PC2 Performance Metrics,,,,,,,,Bayesian Search
+PC2,Recall,0.9865771812080537,PC2 Performance Metrics,,,,,,,,Bayesian Search
+PC2,F1 Score,0.9767441860465116,PC2 Performance Metrics,,,,,,,,Bayesian Search
+PC2,AUC,0.9977472192237292,PC2 Performance Metrics,,,,,,,,Bayesian Search
+PC2,,,PC2 Best Hyperparameters,learning_rate,1.200071975943871,,,,,,Bayesian Search
+PC2,,,PC2 Best Hyperparameters,n_estimators,200.0,,,,,,Bayesian Search
+,,,PC2 Classification Report,,,0,0.9857142857142858,0.965034965034965,0.9752650176678446,143.0,Bayesian Search
+,,,PC2 Classification Report,,,1,0.9671052631578947,0.9865771812080537,0.9767441860465116,149.0,Bayesian Search
+,,,PC2 Classification Report,,,accuracy,0.976027397260274,0.976027397260274,0.976027397260274,0.976027397260274,Bayesian Search
+,,,PC2 Classification Report,,,macro avg,0.9764097744360902,0.9758060731215094,0.9760046018571781,292.0,Bayesian Search
+,,,PC2 Classification Report,,,weighted avg,0.976218585848182,0.976027397260274,0.9760197987925753,292.0,Bayesian Search
+PC3,Accuracy,0.8994708994708994,PC3 Performance Metrics,,,,,,,,Bayesian Search
+PC3,Precision,0.900523560209424,PC3 Performance Metrics,,,,,,,,Bayesian Search
+PC3,Recall,0.900523560209424,PC3 Performance Metrics,,,,,,,,Bayesian Search
+PC3,F1 Score,0.900523560209424,PC3 Performance Metrics,,,,,,,,Bayesian Search
+PC3,AUC,0.9504157684016015,PC3 Performance Metrics,,,,,,,,Bayesian Search
+PC3,,,PC3 Best Hyperparameters,learning_rate,1.49739182477968,,,,,,Bayesian Search
+PC3,,,PC3 Best Hyperparameters,n_estimators,300.0,,,,,,Bayesian Search
+,,,PC3 Classification Report,,,0,0.8983957219251337,0.8983957219251337,0.8983957219251337,187.0,Bayesian Search
+,,,PC3 Classification Report,,,1,0.900523560209424,0.900523560209424,0.900523560209424,191.0,Bayesian Search
+,,,PC3 Classification Report,,,accuracy,0.8994708994708994,0.8994708994708994,0.8994708994708994,0.8994708994708994,Bayesian Search
+,,,PC3 Classification Report,,,macro avg,0.8994596410672788,0.8994596410672788,0.8994596410672788,378.0,Bayesian Search
+,,,PC3 Classification Report,,,weighted avg,0.8994708994708994,0.8994708994708994,0.8994708994708994,378.0,Bayesian Search
+PC4,Accuracy,0.9324324324324325,PC4 Performance Metrics,,,,,,,,Bayesian Search
+PC4,Precision,0.9049586776859504,PC4 Performance Metrics,,,,,,,,Bayesian Search
+PC4,Recall,0.9690265486725663,PC4 Performance Metrics,,,,,,,,Bayesian Search
+PC4,F1 Score,0.9358974358974359,PC4 Performance Metrics,,,,,,,,Bayesian Search
+PC4,AUC,0.9858325891044897,PC4 Performance Metrics,,,,,,,,Bayesian Search
+PC4,,,PC4 Best Hyperparameters,learning_rate,1.200071975943871,,,,,,Bayesian Search
+PC4,,,PC4 Best Hyperparameters,n_estimators,200.0,,,,,,Bayesian Search
+,,,PC4 Classification Report,,,0,0.9653465346534653,0.8944954128440367,0.9285714285714286,218.0,Bayesian Search
+,,,PC4 Classification Report,,,1,0.9049586776859504,0.9690265486725663,0.9358974358974359,226.0,Bayesian Search
+,,,PC4 Classification Report,,,accuracy,0.9324324324324325,0.9324324324324325,0.9324324324324325,0.9324324324324325,Bayesian Search
+,,,PC4 Classification Report,,,macro avg,0.9351526061697079,0.9317609807583015,0.9322344322344323,444.0,Bayesian Search
+,,,PC4 Classification Report,,,weighted avg,0.9346085714222528,0.9324324324324325,0.9323004323004325,444.0,Bayesian Search
+CM1,Accuracy,0.9298245614035088,CM1 Performance Metrics,,,,,,,,Genetic Algorithm
+CM1,Precision,0.8983050847457628,CM1 Performance Metrics,,,,,,,,Genetic Algorithm
+CM1,Recall,0.9636363636363636,CM1 Performance Metrics,,,,,,,,Genetic Algorithm
+CM1,F1 Score,0.9298245614035088,CM1 Performance Metrics,,,,,,,,Genetic Algorithm
+CM1,AUC,0.9134052388289677,CM1 Performance Metrics,,,,,,,,Genetic Algorithm
+CM1,,,CM1 Best Hyperparameters,n_estimators,128.0,,,,,,Genetic Algorithm
+CM1,,,CM1 Best Hyperparameters,learning_rate,0.6956622654349209,,,,,,Genetic Algorithm
+,,,CM1 Classification Report,,,0,0.9636363636363636,0.8983050847457628,0.9298245614035088,59.0,Genetic Algorithm
+,,,CM1 Classification Report,,,1,0.8983050847457628,0.9636363636363636,0.9298245614035088,55.0,Genetic Algorithm
+,,,CM1 Classification Report,,,accuracy,0.9298245614035088,0.9298245614035088,0.9298245614035088,0.9298245614035088,Genetic Algorithm
+,,,CM1 Classification Report,,,macro avg,0.9309707241910632,0.9309707241910632,0.9298245614035088,114.0,Genetic Algorithm
+,,,CM1 Classification Report,,,weighted avg,0.9321168869786177,0.9298245614035088,0.9298245614035088,114.0,Genetic Algorithm
+JM1,Accuracy,0.8428805237315876,JM1 Performance Metrics,,,,,,,,Genetic Algorithm
+JM1,Precision,0.8838709677419355,JM1 Performance Metrics,,,,,,,,Genetic Algorithm
+JM1,Recall,0.7880032867707477,JM1 Performance Metrics,,,,,,,,Genetic Algorithm
+JM1,F1 Score,0.8331885317115552,JM1 Performance Metrics,,,,,,,,Genetic Algorithm
+JM1,AUC,0.9044020494770164,JM1 Performance Metrics,,,,,,,,Genetic Algorithm
+JM1,,,JM1 Best Hyperparameters,n_estimators,296.0,,,,,,Genetic Algorithm
+JM1,,,JM1 Best Hyperparameters,learning_rate,1.486206656842239,,,,,,Genetic Algorithm
+,,,JM1 Classification Report,,,0,0.8101545253863135,0.8973105134474327,0.851508120649652,1227.0,Genetic Algorithm
+,,,JM1 Classification Report,,,1,0.8838709677419355,0.7880032867707477,0.8331885317115552,1217.0,Genetic Algorithm
+,,,JM1 Classification Report,,,accuracy,0.8428805237315876,0.8428805237315876,0.8428805237315876,0.8428805237315876,Genetic Algorithm
+,,,JM1 Classification Report,,,macro avg,0.8470127465641245,0.8426569001090902,0.8423483261806035,2444.0,Genetic Algorithm
+,,,JM1 Classification Report,,,weighted avg,0.8468619355118422,0.8428805237315876,0.842385804881377,2444.0,Genetic Algorithm
+KC1,Accuracy,0.8132183908045977,KC1 Performance Metrics,,,,,,,,Genetic Algorithm
+KC1,Precision,0.8355263157894737,KC1 Performance Metrics,,,,,,,,Genetic Algorithm
+KC1,Recall,0.7604790419161677,KC1 Performance Metrics,,,,,,,,Genetic Algorithm
+KC1,F1 Score,0.7962382445141066,KC1 Performance Metrics,,,,,,,,Genetic Algorithm
+KC1,AUC,0.8345849736990107,KC1 Performance Metrics,,,,,,,,Genetic Algorithm
+KC1,,,KC1 Best Hyperparameters,n_estimators,163.0,,,,,,Genetic Algorithm
+KC1,,,KC1 Best Hyperparameters,learning_rate,1.496153541193339,,,,,,Genetic Algorithm
+,,,KC1 Classification Report,,,0,0.7959183673469388,0.861878453038674,0.8275862068965517,181.0,Genetic Algorithm
+,,,KC1 Classification Report,,,1,0.8355263157894737,0.7604790419161677,0.7962382445141066,167.0,Genetic Algorithm
+,,,KC1 Classification Report,,,accuracy,0.8132183908045977,0.8132183908045977,0.8132183908045977,0.8132183908045977,Genetic Algorithm
+,,,KC1 Classification Report,,,macro avg,0.8157223415682062,0.8111787474774208,0.8119122257053292,348.0,Genetic Algorithm
+,,,KC1 Classification Report,,,weighted avg,0.8149256299616034,0.8132183908045977,0.812542788167045,348.0,Genetic Algorithm
+KC3,Accuracy,0.890625,KC3 Performance Metrics,,,,,,,,Genetic Algorithm
+KC3,Precision,0.8787878787878788,KC3 Performance Metrics,,,,,,,,Genetic Algorithm
+KC3,Recall,0.90625,KC3 Performance Metrics,,,,,,,,Genetic Algorithm
+KC3,F1 Score,0.8923076923076924,KC3 Performance Metrics,,,,,,,,Genetic Algorithm
+KC3,AUC,0.888671875,KC3 Performance Metrics,,,,,,,,Genetic Algorithm
+KC3,,,KC3 Best Hyperparameters,n_estimators,270.0,,,,,,Genetic Algorithm
+KC3,,,KC3 Best Hyperparameters,learning_rate,0.2592482580506069,,,,,,Genetic Algorithm
+,,,KC3 Classification Report,,,0,0.9032258064516129,0.875,0.8888888888888888,32.0,Genetic Algorithm
+,,,KC3 Classification Report,,,1,0.8787878787878788,0.90625,0.8923076923076924,32.0,Genetic Algorithm
+,,,KC3 Classification Report,,,accuracy,0.890625,0.890625,0.890625,0.890625,Genetic Algorithm
+,,,KC3 Classification Report,,,macro avg,0.8910068426197458,0.890625,0.8905982905982905,64.0,Genetic Algorithm
+,,,KC3 Classification Report,,,weighted avg,0.8910068426197458,0.890625,0.8905982905982905,64.0,Genetic Algorithm
+MC1,Accuracy,0.9897039897039897,MC1 Performance Metrics,,,,,,,,Genetic Algorithm
+MC1,Precision,0.9865591397849462,MC1 Performance Metrics,,,,,,,,Genetic Algorithm
+MC1,Recall,0.9918918918918919,MC1 Performance Metrics,,,,,,,,Genetic Algorithm
+MC1,F1 Score,0.9892183288409704,MC1 Performance Metrics,,,,,,,,Genetic Algorithm
+MC1,AUC,0.998326582110366,MC1 Performance Metrics,,,,,,,,Genetic Algorithm
+MC1,,,MC1 Best Hyperparameters,n_estimators,163.0,,,,,,Genetic Algorithm
+MC1,,,MC1 Best Hyperparameters,learning_rate,1.718155552757101,,,,,,Genetic Algorithm
+,,,MC1 Classification Report,,,0,0.9925925925925926,0.9877149877149877,0.9901477832512315,407.0,Genetic Algorithm
+,,,MC1 Classification Report,,,1,0.9865591397849462,0.9918918918918919,0.9892183288409704,370.0,Genetic Algorithm
+,,,MC1 Classification Report,,,accuracy,0.9897039897039897,0.9897039897039897,0.9897039897039897,0.9897039897039897,Genetic Algorithm
+,,,MC1 Classification Report,,,macro avg,0.9895758661887695,0.9898034398034398,0.989683056046101,777.0,Genetic Algorithm
+,,,MC1 Classification Report,,,weighted avg,0.9897195198270466,0.9897039897039897,0.9897051859130119,777.0,Genetic Algorithm
+MC2,Accuracy,0.8787878787878788,MC2 Performance Metrics,,,,,,,,Genetic Algorithm
+MC2,Precision,0.8888888888888888,MC2 Performance Metrics,,,,,,,,Genetic Algorithm
+MC2,Recall,0.8888888888888888,MC2 Performance Metrics,,,,,,,,Genetic Algorithm
+MC2,F1 Score,0.8888888888888888,MC2 Performance Metrics,,,,,,,,Genetic Algorithm
+MC2,AUC,0.9148148148148149,MC2 Performance Metrics,,,,,,,,Genetic Algorithm
+MC2,,,MC2 Best Hyperparameters,n_estimators,247.0,,,,,,Genetic Algorithm
+MC2,,,MC2 Best Hyperparameters,learning_rate,1.497219649863162,,,,,,Genetic Algorithm
+,,,MC2 Classification Report,,,0,0.8666666666666667,0.8666666666666667,0.8666666666666667,15.0,Genetic Algorithm
+,,,MC2 Classification Report,,,1,0.8888888888888888,0.8888888888888888,0.8888888888888888,18.0,Genetic Algorithm
+,,,MC2 Classification Report,,,accuracy,0.8787878787878788,0.8787878787878788,0.8787878787878788,0.8787878787878788,Genetic Algorithm
+,,,MC2 Classification Report,,,macro avg,0.8777777777777778,0.8777777777777778,0.8777777777777778,33.0,Genetic Algorithm
+,,,MC2 Classification Report,,,weighted avg,0.8787878787878788,0.8787878787878788,0.8787878787878788,33.0,Genetic Algorithm
+MW1,Accuracy,0.989010989010989,MW1 Performance Metrics,,,,,,,,Genetic Algorithm
+MW1,Precision,1.0,MW1 Performance Metrics,,,,,,,,Genetic Algorithm
+MW1,Recall,0.9795918367346939,MW1 Performance Metrics,,,,,,,,Genetic Algorithm
+MW1,F1 Score,0.9896907216494846,MW1 Performance Metrics,,,,,,,,Genetic Algorithm
+MW1,AUC,0.9844509232264335,MW1 Performance Metrics,,,,,,,,Genetic Algorithm
+MW1,,,MW1 Best Hyperparameters,n_estimators,165.0,,,,,,Genetic Algorithm
+MW1,,,MW1 Best Hyperparameters,learning_rate,1.475784123173592,,,,,,Genetic Algorithm
+,,,MW1 Classification Report,,,0,0.9767441860465116,1.0,0.9882352941176471,42.0,Genetic Algorithm
+,,,MW1 Classification Report,,,1,1.0,0.9795918367346939,0.9896907216494846,49.0,Genetic Algorithm
+,,,MW1 Classification Report,,,accuracy,0.989010989010989,0.989010989010989,0.989010989010989,0.989010989010989,Genetic Algorithm
+,,,MW1 Classification Report,,,macro avg,0.9883720930232558,0.9897959183673469,0.9889630078835658,91.0,Genetic Algorithm
+,,,MW1 Classification Report,,,weighted avg,0.9892665474060822,0.989010989010989,0.9890189858655595,91.0,Genetic Algorithm
+PC1,Accuracy,0.9651162790697675,PC1 Performance Metrics,,,,,,,,Genetic Algorithm
+PC1,Precision,0.9666666666666667,PC1 Performance Metrics,,,,,,,,Genetic Algorithm
+PC1,Recall,0.9586776859504132,PC1 Performance Metrics,,,,,,,,Genetic Algorithm
+PC1,F1 Score,0.9626556016597511,PC1 Performance Metrics,,,,,,,,Genetic Algorithm
+PC1,AUC,0.9869698980515172,PC1 Performance Metrics,,,,,,,,Genetic Algorithm
+PC1,,,PC1 Best Hyperparameters,n_estimators,170.0,,,,,,Genetic Algorithm
+PC1,,,PC1 Best Hyperparameters,learning_rate,1.538955950630312,,,,,,Genetic Algorithm
+,,,PC1 Classification Report,,,0,0.9637681159420289,0.9708029197080292,0.9672727272727273,137.0,Genetic Algorithm
+,,,PC1 Classification Report,,,1,0.9666666666666667,0.9586776859504132,0.9626556016597511,121.0,Genetic Algorithm
+,,,PC1 Classification Report,,,accuracy,0.9651162790697675,0.9651162790697675,0.9651162790697675,0.9651162790697675,Genetic Algorithm
+,,,PC1 Classification Report,,,macro avg,0.9652173913043478,0.9647403028292212,0.9649641644662392,258.0,Genetic Algorithm
+,,,PC1 Classification Report,,,weighted avg,0.9651275137624986,0.9651162790697675,0.9651073311519128,258.0,Genetic Algorithm
+PC2,Accuracy,0.9931506849315068,PC2 Performance Metrics,,,,,,,,Genetic Algorithm
+PC2,Precision,0.9932885906040269,PC2 Performance Metrics,,,,,,,,Genetic Algorithm
+PC2,Recall,0.9932885906040269,PC2 Performance Metrics,,,,,,,,Genetic Algorithm
+PC2,F1 Score,0.9932885906040269,PC2 Performance Metrics,,,,,,,,Genetic Algorithm
+PC2,AUC,0.9996245365372882,PC2 Performance Metrics,,,,,,,,Genetic Algorithm
+PC2,,,PC2 Best Hyperparameters,n_estimators,104.0,,,,,,Genetic Algorithm
+PC2,,,PC2 Best Hyperparameters,learning_rate,1.561904448059235,,,,,,Genetic Algorithm
+,,,PC2 Classification Report,,,0,0.993006993006993,0.993006993006993,0.993006993006993,143.0,Genetic Algorithm
+,,,PC2 Classification Report,,,1,0.9932885906040269,0.9932885906040269,0.9932885906040269,149.0,Genetic Algorithm
+,,,PC2 Classification Report,,,accuracy,0.9931506849315068,0.9931506849315068,0.9931506849315068,0.9931506849315068,Genetic Algorithm
+,,,PC2 Classification Report,,,macro avg,0.9931477918055099,0.9931477918055099,0.9931477918055099,292.0,Genetic Algorithm
+,,,PC2 Classification Report,,,weighted avg,0.9931506849315068,0.9931506849315068,0.9931506849315068,292.0,Genetic Algorithm
+PC3,Accuracy,0.9206349206349206,PC3 Performance Metrics,,,,,,,,Genetic Algorithm
+PC3,Precision,0.9128205128205128,PC3 Performance Metrics,,,,,,,,Genetic Algorithm
+PC3,Recall,0.9319371727748691,PC3 Performance Metrics,,,,,,,,Genetic Algorithm
+PC3,F1 Score,0.9222797927461139,PC3 Performance Metrics,,,,,,,,Genetic Algorithm
+PC3,AUC,0.9578632023966178,PC3 Performance Metrics,,,,,,,,Genetic Algorithm
+PC3,,,PC3 Best Hyperparameters,n_estimators,283.0,,,,,,Genetic Algorithm
+PC3,,,PC3 Best Hyperparameters,learning_rate,1.157882420031645,,,,,,Genetic Algorithm
+,,,PC3 Classification Report,,,0,0.9289617486338798,0.9090909090909091,0.918918918918919,187.0,Genetic Algorithm
+,,,PC3 Classification Report,,,1,0.9128205128205128,0.9319371727748691,0.9222797927461139,191.0,Genetic Algorithm
+,,,PC3 Classification Report,,,accuracy,0.9206349206349206,0.9206349206349206,0.9206349206349206,0.9206349206349206,Genetic Algorithm
+,,,PC3 Classification Report,,,macro avg,0.9208911307271963,0.9205140409328891,0.9205993558325165,378.0,Genetic Algorithm
+,,,PC3 Classification Report,,,weighted avg,0.9208057273631044,0.9206349206349206,0.9206171382337185,378.0,Genetic Algorithm
+PC4,Accuracy,0.9459459459459459,PC4 Performance Metrics,,,,,,,,Genetic Algorithm
+PC4,Precision,0.9316239316239316,PC4 Performance Metrics,,,,,,,,Genetic Algorithm
+PC4,Recall,0.9646017699115044,PC4 Performance Metrics,,,,,,,,Genetic Algorithm
+PC4,F1 Score,0.9478260869565217,PC4 Performance Metrics,,,,,,,,Genetic Algorithm
+PC4,AUC,0.9875375497280182,PC4 Performance Metrics,,,,,,,,Genetic Algorithm
+PC4,,,PC4 Best Hyperparameters,n_estimators,146.0,,,,,,Genetic Algorithm
+PC4,,,PC4 Best Hyperparameters,learning_rate,1.78315672972839,,,,,,Genetic Algorithm
+,,,PC4 Classification Report,,,0,0.9619047619047619,0.926605504587156,0.9439252336448598,218.0,Genetic Algorithm
+,,,PC4 Classification Report,,,1,0.9316239316239316,0.9646017699115044,0.9478260869565217,226.0,Genetic Algorithm
+,,,PC4 Classification Report,,,accuracy,0.9459459459459459,0.9459459459459459,0.9459459459459459,0.9459459459459459,Genetic Algorithm
+,,,PC4 Classification Report,,,macro avg,0.9467643467643467,0.9456036372493302,0.9458756603006908,444.0,Genetic Algorithm
+,,,PC4 Classification Report,,,weighted avg,0.9464915464915465,0.9459459459459459,0.9459108031233183,444.0,Genetic Algorithm
