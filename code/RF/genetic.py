@@ -66,7 +66,7 @@ for filename in os.listdir(folder_path):
         toolbox.register("attr_int_max_depth", random.randint, 5, 15)
         toolbox.register("attr_int_min_samples_split", random.randint, 2, 10)  # 최소값을 2로 설정
         toolbox.register("attr_int_min_samples_leaf", random.randint, 1, 4)    # 최소값을 1로 설정
-        toolbox.register("attr_float_max_features", random.uniform, 0.1, 0.9)
+        toolbox.register("attr_float_max_features", random.uniform, 0.1, 1.0)  # 0.1과 1.0 사이로 제한
 
         toolbox.register("individual", tools.initCycle, creator.Individual,
                          (toolbox.attr_int_n_estimators, toolbox.attr_int_max_depth,
@@ -88,9 +88,9 @@ for filename in os.listdir(folder_path):
         best_individual = hof[0]
         n_estimators = int(best_individual[0])
         max_depth = int(best_individual[1])
-        min_samples_split = int(best_individual[2])
-        min_samples_leaf = int(best_individual[3])
-        max_features = best_individual[4]
+        min_samples_split = max(2, int(best_individual[2]))  # 2 이상으로 제한
+        min_samples_leaf = max(1, int(best_individual[3]))   # 1 이상으로 제한
+        max_features = max(0.1, min(best_individual[4], 1.0))  # 0.1과 1.0 사이로 제한
 
         # 최적의 모델로 예측 수행
         best_rf = RandomForestClassifier(
